@@ -35,13 +35,23 @@ This is the backend API for the IBAN validation web application. It provides ser
    
    ```shell
    php artisan migrate
+   
+5. Seed the database with the admin user:
+   
+   ```shell
+   php artisan db:seed --class=AdminUserSeeder
 
-5. Generate Application Key:
+  - #### This will create an admin user with the following credentials:
+
+    - Email: admin@example.com
+    - Password: admin@123
+
+6. Generate Application Key:
    
    ```shell
    php artisan key:generate
    
-6. Start the Server:
+7. Start the Server:
    
    ```shell
    php artisan serve
